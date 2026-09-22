@@ -50,6 +50,12 @@ export default function RootLayout({
                 >
                   Projects
                 </Link>
+                <Link
+                  href="/blog"
+                  className="rounded-md px-3 py-1.5 text-sm font-medium text-paper hover:bg-raised"
+                >
+                  Blog
+                </Link>
               </nav>
               <div className="ml-auto flex items-center gap-4">
                 <span className="flex items-center gap-2 font-mono text-[11px] tracking-[0.14em] text-fog">

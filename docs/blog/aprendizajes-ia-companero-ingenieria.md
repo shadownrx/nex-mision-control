@@ -1,441 +1,404 @@
-# Aprendizajes — Trabajar con IA como compañero de ingeniería
+# Cuando la IA se convirtió en mi compañero de ingeniería
 
-## 1. El problema inicial
+Durante mucho tiempo usé la inteligencia artificial de una manera bastante simple.
 
-Todo comenzó con una pregunta bastante simple:
-
-> **¿Cómo le digo a la IA que haga mejores cosas?**
-
-Al principio, mi forma de trabajar con IA era principalmente pedirle resultados.
-
-Por ejemplo:
+Le decía:
 
 > “Construime una app.”
 
-La IA podía producir código, componentes, endpoints y pantallas. Pero había una diferencia importante entre **generar código** y **entender qué debía construirse**.
+Y esperaba que hiciera lo que yo tenía en la cabeza.
 
-El problema no era solamente la capacidad de la IA.
+El problema era que muchas veces no lo hacía.
 
-El problema era el contexto que yo le estaba dando.
+Al principio pensaba que simplemente tenía que aprender a escribir mejores prompts. Entonces empecé a investigar cómo explicarle mejor las cosas.
 
----
+Y ahí empezó a cambiar todo.
 
-## 2. El cambio: dejar de pedir solamente código
+## El problema no era la IA
 
-Con el tiempo empecé a darle más información antes de pedir una implementación:
+Creo que todos empezamos más o menos igual.
 
-* qué problema quería resolver;
-* qué quería conseguir;
-* qué decisiones ya había tomado;
-* qué cosas estaban fuera de alcance;
-* qué restricciones tenía;
-* qué significaba que algo estuviera correctamente implementado;
-* cómo debía verificarse el resultado.
+Tenés una idea en la cabeza y pensás:
 
-Sin darme cuenta, empecé a cambiar la relación con la IA.
+> “Quiero esto.”
 
-Ya no era:
+Pero cuando llega el momento de explicárselo a una IA, no sabés exactamente cómo decirlo.
 
-```text
-Yo → pedido → IA → código
-```
+Entonces le das una instrucción bastante general y la IA empieza a construir.
 
-Sino algo más parecido a:
+Y muchas veces termina haciendo cualquier cosa.
 
-```text
-Problema
-   ↓
-Contexto
-   ↓
-Decisiones
-   ↓
-Especificación
-   ↓
-Implementación
-   ↓
-Tests
-   ↓
-Revisión
-   ↓
-Verificación
-```
+Pero con el tiempo entendí algo importante: muchas veces **no era culpa de la IA**.
 
-Y ahí apareció uno de los aprendizajes más importantes del proyecto:
+Yo tenía una idea muy clara en mi cabeza, pero no sabía transmitirla.
 
-> **No necesitaba decirle a la IA “sos un desarrollador”. Necesitaba darle un proceso de ingeniería dentro del cual pudiera trabajar.**
+Era como intentar explicarle a otro desarrollador qué quería construir diciéndole solamente:
 
----
+> “Hacelo como vos puedas.”
 
-## 3. Lo que pasó con Muse
+Obviamente necesitaba más información.
 
-NEX Mission Control fue el proyecto donde puse esta idea a prueba.
+## De los prompts al contexto
 
-No le dije a Muse:
+Empecé mirando cómo mejorar mis prompts.
 
-> “Comportate como un Senior Software Engineer.”
+Por ejemplo, con herramientas como Suno, antes podía decir algo como:
 
-En cambio, le fui dando contexto, restricciones, documentos, especificaciones, tickets y criterios de verificación.
+> “Quiero música electrónica que suene como Avicii.”
 
-El comportamiento resultante empezó a parecerse cada vez más al de un compañero de ingeniería.
+Después empecé a entender que podía especificar mucho más: género, BPM, características del bajo, estructura, energía, etc.
 
-Muse podía:
+Y los resultados cambiaban.
 
-* cuestionar una definición del producto;
-* detectar scope creep;
-* proponer límites de dominio;
-* convertir una idea en una especificación;
-* dividir trabajo en tickets;
-* implementar siguiendo esos límites;
-* escribir y ejecutar tests;
-* detectar defectos;
-* revisar invariantes;
-* verificar que no se hubieran agregado funcionalidades fuera de alcance.
+Ahí pensé que simplemente necesitaba darle mucha más información a la IA.
 
-La diferencia es importante.
+Y funcionaba.
 
-No estaba intentando darle una personalidad.
+Pero después apareció otro problema.
 
-Estaba construyendo un **sistema de trabajo**.
+En proyectos grandes como NEX OS, también podés darle **demasiada información**.
 
----
+Cuando estás trabajando en algo enorme, no todo el contexto es relevante para el problema que estás intentando resolver en ese momento.
 
-## 4. El grilling cambió el proyecto
+Entonces entendí que no se trata de darle más información porque sí.
 
-Una de las partes más importantes fue descubrir que la primera definición de Mission Control no era todavía el producto que quería construir.
+Se trata de darle **la información correcta**.
 
-La primera idea podía resumirse como:
+Eso cambió bastante mi forma de pensar.
 
-> Notion + GitHub Projects + decisiones técnicas + documentación + actividad.
+Yo sentía que necesitaba mejores planes.
 
-Pero al analizarla, apareció un problema:
+Pero después entendí que un plan gigante y lleno de información tampoco necesariamente ayuda.
 
-> **Eso podía terminar siendo simplemente un Task Manager con varias entidades adicionales.**
+Necesitaba aprender a construir el contexto correcto para cada problema.
 
-El grilling obligó a preguntar:
+## Cuando descubrí los Skills
 
-* ¿Qué problema específico resuelve?
-* ¿Qué información necesita existir?
-* ¿Qué debería derivarse automáticamente?
-* ¿Qué no debería existir?
-* ¿Qué decisiones son realmente parte del dominio?
-* ¿Qué significa “actividad”?
-* ¿Qué información debería desaparecer cuando un registro se elimina?
+En ese proceso empecé a trabajar con los Skills de Matt Pocock / AI Hero.
 
-Eso llevó a una definición mucho más precisa:
+Y mi reacción inicial fue bastante simple:
 
-> **NEX Mission Control no rastrea solamente qué hay que hacer. Muestra cómo evoluciona cada proyecto: qué se decidió y por qué, qué cambió y qué sigue abierto.**
+**WTF.**
 
-Ese cambio fue más importante que cualquier componente de UI que se haya escrito después.
+Había herramientas para trabajar con la IA de una manera mucho más estructurada.
 
----
+Empecé a probar cosas como:
 
-## 5. Domain modeling antes de programar
+* `/domain-modeling`
+* `/to-spec`
+* `/to-tickets`
+* `/implement`
+* `/tdd`
+* `/code-review`
+* `/ask-matt`
+* `/grill-with-docs`
 
-Otro aprendizaje fue que muchas discusiones que parecen técnicas en realidad son decisiones de dominio.
+Y ahí pasó algo que no esperaba.
 
-Por ejemplo:
+La IA dejó de sentirse solamente como algo al que le pedía código.
 
-### Activity
+Empezó a formar parte de un proceso de ingeniería.
 
-Podíamos haber creado una tabla `activity`.
+## Domain Modeling
 
-Pero al analizar el problema, no era necesario.
+Probablemente una de las cosas que más me llamó la atención fue `/domain-modeling`.
 
-La actividad podía derivarse de los cambios que ya conocíamos.
+Mi reacción fue:
 
-Por eso:
+> “Esto también era lo que necesitaba. ¿Por qué no aprendí esto antes?”
 
-```text
-Activity = derived view
-```
+Antes de implementar Mission Control tuve que pensar realmente qué significaba cada cosa.
 
-y no:
+¿Qué es un Project?
 
-```text
-Activity = persisted entity
-```
+¿Qué es una Task?
 
-Eso evitó convertir el sistema en un audit log que nadie había pedido.
+¿Qué es una Technical Decision?
 
-### Project status
+¿Qué relación tienen?
 
-También apareció la posibilidad de tener algo como:
+¿Qué debería estar permitido?
 
-```text
-active
-stalled
-done
-```
+¿Qué no debería estar permitido?
 
-Pero esos estados introducían una semántica que el dominio todavía no justificaba.
+Y cuando empezás a hacer esas preguntas, aparecen problemas que antes ni siquiera existían.
 
-En lugar de inventar un estado de proyecto, se utilizaron señales observables:
+Eso me pareció increíble.
 
-```text
-openTasks
-closedTasks
-activeDecisions
-supersededDecisions
-documents
-lastActivity
-```
+Porque cuando una idea está solamente en tu cabeza, todo parece sencillo.
 
-La aplicación muestra información.
+Después intentás convertirla en software y aparecen los límites.
 
-No inventa significado.
+Construir un sistema operativo, por ejemplo, suena increíble.
 
----
+Pero después tenés que pensar:
 
-## 6. La especificación redujo ambigüedad
+> “¿Cómo hago algo suficientemente poderoso sin terminar destruyendo la computadora del usuario?”
 
-`/to-spec` fue importante porque convirtió decisiones dispersas en comportamiento verificable.
+Ahí aparecen problemas que antes no estabas pensando.
 
-Por ejemplo, en Stage 2 se definió exactamente:
+Y eso es bueno.
 
-* cómo calcular `lastActivity`;
-* qué decisiones aparecen en `direction`;
-* cómo se ordenan;
-* cuál es el límite;
-* cómo se agrupan los episodios;
-* cómo funciona la supersession;
-* qué ocurre cuando no hay actividad;
-* qué ocurre cuando se eliminan todos los registros.
+Porque estás encontrando problemas antes de que se conviertan en problemas reales.
 
-Esto cambió la naturaleza del trabajo.
+## Una idea grande empieza a dividirse
 
-La IA ya no tenía que interpretar libremente:
+Otra cosa que aprendí fue a dejar de mirar un proyecto enorme como una sola cosa.
 
-> “Hacé un overview del proyecto.”
+Mission Control podía parecer una idea gigante.
 
-Tenía reglas concretas contra las cuales implementar y probar.
+Pero con el proceso correcto podés empezar a dividirla.
 
----
+Primero el dominio.
 
-## 7. Los tickets funcionaron como límites
+Después la especificación.
 
-`/to-tickets` convirtió la especificación en unidades verticales de trabajo.
+Después los tickets.
 
-Esto permitió que cada implementación tuviera:
+Después la implementación.
 
-* objetivo;
-* alcance;
-* dependencias;
-* invariantes;
-* criterios de aceptación;
-* cosas explícitamente prohibidas.
+Después los tests.
 
-Esto fue particularmente importante para evitar que la IA agregara funcionalidades simplemente porque parecían útiles.
+Después la revisión.
 
-Un ticket podía decir:
+Y así una idea que parece enorme empieza a convertirse en problemas mucho más manejables.
 
-> No agregar nuevos endpoints.
+No significa que el proyecto sea fácil.
 
-> No agregar persistencia.
+Significa que ahora sé **por dónde empezar**.
 
-> No modificar el dominio.
+## Cuando la IA te contradice
 
-> No agregar Project Status.
+También aprendí algo que antes no aprovechaba tanto.
 
-Y esas restricciones formaban parte de la ingeniería, no eran una sugerencia.
+La IA puede decirte:
 
----
+> “Che, esto que estás planteando quizás no sea la mejor solución.”
 
-## 8. La IA también puede equivocarse de una forma interesante
+Y eso no necesariamente es algo malo.
 
-Un aprendizaje importante fue que el problema no desaparece porque la IA sea capaz.
+De hecho, muchas veces es exactamente lo que necesitás.
 
-Por ejemplo, durante el desarrollo apareció el problema de Vitest ejecutando workers en paralelo sobre la misma base de datos.
+En Mission Control hubo momentos en los que una propuesta podía hacer que el producto terminara pareciéndose demasiado a un Task Manager.
 
-El resultado era una interacción entre tests que no tenía que ver con la lógica del producto.
+Yo podía decir:
 
-La solución fue:
+> “Me gusta lo que proponés, pero podemos ver de implementar ambas soluciones quizás producimos algo mejor.”
 
-```text
-fileParallelism: false
-```
+Y ahí aparece algo interesante.
 
-No se cambió el comportamiento de la aplicación.
+No tenés que aceptar todo lo que dice la IA.
 
-Se corrigió el entorno de ejecución de los tests.
+Pero tampoco tenés que rechazarlo automáticamente.
 
-Esto mostró otra cosa:
+Podés discutir.
 
-> **Cuando algo falla, primero hay que entender qué capa está fallando antes de pedirle a la IA que “lo arregle”.**
+Podés preguntarle.
 
----
+Podés buscar otra alternativa.
 
-## 9. Los edge cases también enseñan sobre el dominio
+Podés incluso darte cuenta de que estaba viendo algo que vos no habías visto.
 
-En S2-05 apareció un caso interesante:
+Y eso me hizo pensar en algo que también considero importante como desarrollador:
 
-Una cadena completamente superseded no podía producirse normalmente mediante la API porque la invariante del repositorio garantiza que el head permanece activo.
+**no mirar un problema desde un solo lado.**
 
-Eso significaba que el test no representaba un flujo normal de usuario.
+Podés pensar en funcionalidad.
 
-Pero seguía siendo útil para comprobar que la función de derivación podía manejar inputs parciales o legacy sin romperse.
+Pero también en seguridad.
 
-La lección fue:
+En performance.
 
-> **Un test no siempre describe algo que el usuario puede hacer. También puede proteger una propiedad del sistema frente a estados inesperados.**
+En escalabilidad.
 
----
+En casos extremos.
 
-## 10. El momento más interesante: no cambiar nada
+En qué pasa mañana si el sistema crece.
 
-S2-06 fue una de las partes más reveladoras.
+## “¿Y si mañana explota esto?”
 
-La instrucción era verificar Stage 2 completo.
+En la universidad muchas veces te plantean algo como:
 
-La IA ejecutó:
+> “Creá un sistema para diez personas.”
 
-* tests;
-* typecheck;
-* build;
-* `db:push`;
-* inspecciones de persistencia;
-* revisión de anchors;
-* revisión de copy;
-* búsqueda de scope creep;
-* comprobación de invariantes.
+Pero cuando empezás a trabajar como desarrollador cambia la pregunta.
 
-Resultado:
+Ya no pensás solamente en esas diez personas.
 
-```text
-22 archivos de tests
-115 tests
-0 fallos
-0 defectos
-0 archivos modificados
-```
+Pensás:
 
-La implementación correcta de una tarea de ingeniería fue:
+> “¿Qué pasa si mañana explota esto?”
 
-> **No tocar el código.**
+¿Qué pasa si empiezan a llegar muchísimas requests?
 
-Eso es importante porque demuestra que el objetivo de una IA de desarrollo no debería ser producir cambios.
+¿Qué pasa si una API recibe demasiadas peticiones?
 
-El objetivo debería ser producir **el cambio correcto, o ninguno cuando no hace falta cambiar nada**.
+¿Qué pasa si una parte del sistema se satura?
 
----
+Esas preocupaciones ya eran mías.
 
-## 11. Qué cambió en mi forma de usar IA
+La IA no inventó esos problemas por mí.
 
-Antes pensaba principalmente en:
+Lo que hizo fue ayudarme a explorar diferentes soluciones, riesgos y formas de comprobar si el sistema podía soportarlos.
 
-> “¿Qué prompt tengo que escribir para conseguir un mejor resultado?”
+Incluso terminé implementando monitoreo para poder observar lo que estaba pasando.
 
-Ahora pienso más en:
+Ahí entendí que la IA no tiene que decidir qué problema me importa.
 
-> “¿Qué contexto necesita la IA para tomar una buena decisión?”
+Puede ayudarme a pensar mucho más profundamente sobre el problema que **yo** decidí resolver.
 
-La diferencia parece pequeña, pero cambia completamente el enfoque.
+## La IA como compañero de ingeniería
 
-Ahora pienso en:
+Después de todo esto, para mí hay una diferencia enorme entre decir que la IA es un “asistente de programación” y decir que es un **compañero de ingeniería**.
 
-```text
-Contexto
-+ restricciones
-+ dominio
-+ especificación
-+ herramientas
-+ tests
-+ feedback
-+ verificación
-```
+Porque ya no solamente escribe código.
 
-como parte de la interfaz con la IA.
+Puede ayudarte a pensar.
 
-El prompt es solamente una parte.
+Puede cuestionar una decisión.
 
----
+Puede encontrar un caso que no habías contemplado.
 
-## 12. Prompt engineering vs. AI engineering
+Puede ayudarte a dividir una idea enorme.
 
-Una de las conclusiones que me llevo de este proyecto es que existe una diferencia entre optimizar una instrucción y diseñar un sistema de trabajo.
+Puede ayudarte a investigar.
 
-### Prompt engineering
+Puede revisar lo que hiciste.
 
-Busca principalmente:
+Y también puede equivocarse.
 
-> “¿Cómo tengo que pedírselo?”
+Eso último es importante.
 
-### AI-assisted engineering
+La IA no se convirtió mágicamente en un ingeniero perfecto.
 
-Empieza a preguntar:
+Lo que cambió fue la forma en la que yo trabajaba con ella.
 
-> “¿Qué contexto, herramientas, restricciones, feedback y mecanismos de verificación necesita la IA para trabajar de forma confiable?”
+Yo seguía teniendo que decidir qué quería construir.
 
-En NEX Mission Control, la segunda aproximación fue mucho más importante que encontrar una frase mágica.
+Seguía teniendo que decidir qué propuesta tenía sentido.
 
----
+Seguía teniendo que revisar.
 
-## 13. La IA no reemplazó el criterio
+Pero ahora tenía otra perspectiva disponible mientras desarrollaba.
 
-Durante todo el proyecto hubo decisiones que no podían delegarse simplemente a:
+Y muchas veces esa perspectiva me hacía decir:
 
-> “Elegí lo que consideres mejor.”
+> “Ah, para esto no pensé.”
 
-Por ejemplo:
+Y para mí eso es algo bueno.
 
-* qué problema resolver;
-* qué queda fuera;
-* qué significa Activity;
-* si una información debe persistirse;
-* qué semántica no debe introducirse;
-* qué invariantes son importantes;
-* qué comportamiento aceptar;
-* cuándo una feature constituye scope creep.
+## También aprendí yo
 
-La IA puede ayudar a explorar esas decisiones.
+Quizás esta sea una de las partes que menos esperaba.
 
-Pero alguien tiene que decidir qué problema vale la pena resolver y qué sistema se quiere construir.
+Pensé que iba a aprender a utilizar mejor la IA.
 
-Ese fue mi papel durante el proyecto.
+Y terminé aprendiendo mejor algunas cosas de ingeniería.
 
----
+El proceso me llevó a pensar de forma más estructurada.
 
-## 14. El verdadero aprendizaje
+A definir mejor los problemas.
 
-El aprendizaje más importante no fue aprender a hacer mejores prompts.
+A entender mejor los dominios.
 
-Fue entender que **la calidad de la IA depende enormemente del sistema en el que la colocás**.
+A dividir proyectos.
 
-Una IA puede recibir:
+A pensar en límites.
 
-```text
-“Construime una app.”
-```
+A considerar casos que antes quizás no tenía presentes.
 
-y producir algo.
+Entonces no fue solamente:
 
-Pero puede recibir:
+> “Aprendí a darle mejores instrucciones a la IA.”
 
-```text
-Contexto
-+
-Problema
-+
-Dominio
-+
-Restricciones
-+
-Especificación
-+
-Tickets
-+
-Tests
-+
-Feedback
-+
-Verificación
-```
+También aprendí a pensar mejor sobre lo que estaba intentando construir.
 
-y trabajar dentro de un proceso mucho más parecido a ingeniería real.
+## Entonces, ¿qué significa dominar la IA?
 
-Por eso, mirando hacia atrás, siento que no aprendí simplemente a “usar mejor la IA”.
+Creo que “dominar la IA” no es lo que uno se imaginaría.
 
-Aprendí a **dirigirla**.
+No es como aprender React.
 
-Y quizás la mejor forma de resumir todo el proyecto sea esta:
+Y, siendo sincero, tampoco creo que lleguemos a dominar completamente las tecnologías que usamos.
 
-> **No le enseñé a la IA a ser un desarrollador. Aprendí a construir el contexto en el que podía trabajar como uno.**
+Lo que hacemos es empezar a entender cómo trabajar con ellas.
+
+Con la IA me pasó algo parecido.
+
+Empecé entendiendo cómo podía comunicarme mejor.
+
+Después entendí cómo darle contexto.
+
+Después cómo estructurar un proceso.
+
+Y finalmente cómo aprovechar todo eso para construir.
+
+Para mí, dominar la IA significa empezar a entender **cómo hacer para que deje de ser tu enemigo y se convierta en tu aliado**.
+
+## Lo que le diría a alguien que recién empieza
+
+Creo que todos nos frustramos al principio.
+
+Todos empezamos diciéndole:
+
+> “Haceme una app.”
+
+Y después nos preguntamos por qué no hizo exactamente lo que imaginábamos.
+
+Pero es normal.
+
+Yo también empecé ahí.
+
+Con el tiempo entendés que la IA puede darte resultados mucho mejores cuando aprendés a explicarle lo que querés lograr.
+
+Y para mí la mejor forma de pensarlo es como si estuvieras hablando con otro desarrollador.
+
+No le dirías simplemente:
+
+> “Construí esto.”
+
+Le explicarías qué querés lograr.
+
+Por qué lo querés.
+
+Qué tecnologías estás usando.
+
+Qué restricciones existen.
+
+Qué esperás.
+
+Qué problemas querés resolver.
+
+Y cuanto mejor entendés eso, mejor podés trabajar con la IA.
+
+## De “haceme una app” a trabajar juntos
+
+Si miro hacia atrás, creo que mi evolución fue bastante simple.
+
+Primero quería que la IA hiciera cosas por mí.
+
+Después quería aprender a decirle mejor qué hacer.
+
+Después entendí la importancia del contexto.
+
+Después descubrí que no necesitaba simplemente más contexto, sino el contexto correcto.
+
+Después empecé a estructurar el trabajo.
+
+Y finalmente entendí que la IA podía ser mucho más que una herramienta para generar código.
+
+Podía ser parte de mi proceso de ingeniería.
+
+No porque yo le haya dicho:
+
+> “Sos un desarrollador.”
+
+Sino porque aprendí a trabajar con ella de una manera que hacía que pudiera participar mucho mejor en el proceso.
+
+Y creo que ese fue uno de los aprendizajes más grandes que me llevo.
+
+**No se trata solamente de hacer que la IA haga más cosas.**
+
+Se trata de aprender cómo trabajar con ella.
+
+Porque cuando aprendés eso, una idea que antes parecía demasiado grande puede empezar a convertirse en algo real.
