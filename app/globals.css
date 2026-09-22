@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas,
+    monospace;
+
+  --color-void: #0a0c0f;
+  --color-panel: #11141a;
+  --color-raised: #181d25;
+  --color-line: #262d38;
+  --color-line-soft: #1b212b;
+  --color-paper: #edeae1;
+  --color-fog: #a9b1bc;
+  --color-dim: #6f7885;
+  --color-signal: #ff5a1f;
+  --color-signal-deep: #b53a0c;
+  --color-signal-wash: #221209;
+  --color-ok: #3ddc84;
+  --color-danger: #ff6b6b;
+
+  --animate-blink: blink 2.2s ease-in-out infinite;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-void text-paper font-sans antialiased;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: #170903;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+
+  input::placeholder {
+    color: var(--color-dim);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@layer utilities {
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
